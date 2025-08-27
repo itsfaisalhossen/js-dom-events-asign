@@ -17,11 +17,17 @@ function setInnerText(value) {
   setElement.innerText = value;
 }
 
+function setInnerText2(value) {
+  const setElement = getElement("copy-count");
+  setElement.innerText = value;
+}
+
 const allHeartBtn = document.getElementsByClassName("heart-btn");
 for (const heartBtn of allHeartBtn) {
   heartBtn.addEventListener("click", function (e) {
     const heartCount = getInnerText("heart-count");
     const totalCount = heartCount + 1;
+    console.log(totalCount);
     setInnerText(totalCount);
   });
 }
@@ -48,12 +54,13 @@ for (const callBtn of allCallBtn) {
     };
 
     // totalCoin == 0 || totalCoin > 0
-
     if (totalCoin == -20) {
       setCoinElement.innerText = 0;
       alert("You have no coin. You have to call minimum 20 coin");
       return;
     }
+
+    alert(`📞 Calling ${subTitle} ${number}. . . .`);
     setCoinElement.innerText = totalCoin;
 
     historyData.push(data);
@@ -77,7 +84,5 @@ for (const callBtn of allCallBtn) {
       `;
       historeyContainer.appendChild(div);
     }
-
-    alert(`📞 Calling ${subTitle} ${number}. . . .`);
   });
 }
