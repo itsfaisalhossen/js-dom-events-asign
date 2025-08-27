@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Taiwind CDN Link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <!-- CSS link -->
     <link rel="stylesheet" href="./css/style.css" />
-
     <title>Emergency Service</title>
   </head>
   <body class="inter bg-[#F5FFF6]">
@@ -45,13 +42,13 @@
           <div
             class="flex items-center text-sm md:text-lg bg-green-100 px-6 py-2 rounded-full font-bold gap-1.5"
           >
-            <p>0</p>
+            <p id="heart-count">0</p>
             <img class="w-6" src="./assets/heart.png" alt="heart_icon" />
           </div>
           <div
             class="flex items-center text-sm md:text-lg bg-green-100 px-6 py-2 rounded-full font-bold gap-1.5"
           >
-            <p>100</p>
+            <p id="coin-decrease">100</p>
 
             <img class="w-6" src="./assets/coin.png" alt="coin_icon" />
           </div>
@@ -90,7 +87,7 @@
                 src="./assets/emergency.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -108,12 +105,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -128,7 +125,7 @@
                 src="./assets/police.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -146,12 +143,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -166,7 +163,7 @@
                 src="./assets/fire-service.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -184,12 +181,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -204,7 +201,7 @@
                 src="./assets/ambulance.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -222,12 +219,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -242,7 +239,7 @@
                 src="./assets/emergency.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -260,12 +257,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -280,7 +277,7 @@
                 src="./assets/emergency.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -298,12 +295,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -318,7 +315,7 @@
                 src="./assets/emergency.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -336,12 +333,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -356,7 +353,7 @@
                 src="./assets/emergency.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -374,12 +371,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -394,7 +391,7 @@
                 src="./assets/emergency.png"
                 alt=""
               />
-              <button class="text-lg cursor-pointer text-gray-500">
+              <button class="heart-btn text-lg cursor-pointer text-gray-500">
                 <i class="fa-regular fa-heart"></i>
               </button>
             </div>
@@ -412,12 +409,12 @@
             </div>
             <div class="flex gap-5">
               <button
-                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300"
+                class="cursor-pointer text-sm px-3 py-2 border w-full rounded-lg border-gray-300 hover:border-gray-400 transition"
               >
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
               <button
-                class="cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
+                class="call-btn cursor-pointer text-sm px-3 py-2 w-full rounded-lg bg-green-600 hover:bg-green-700 transition text-white"
               >
                 <i class="fa-solid fa-phone-volume"></i> Call
               </button>
@@ -437,39 +434,7 @@
               Clear
             </button>
           </div>
-          <div
-            class="flex items-center justify-between bg-gray-100 p-3 rounded-xl"
-          >
-            <div>
-              <h4 class="font-semibold mb-1.5 w-full lg:w-[210px]">
-                Bangladesh Railway Helpline
-              </h4>
-              <p class="text-gray-500">999</p>
-            </div>
-            <p class="text-gray-500 text-sm">11:3654 AM</p>
-          </div>
-          <div
-            class="flex items-center justify-between bg-gray-100 p-3 rounded-xl"
-          >
-            <div>
-              <h4 class="font-semibold mb-1.5 w-full lg:w-[210px]">
-                Bangladesh Railway Helpline
-              </h4>
-              <p class="text-gray-500">999</p>
-            </div>
-            <p class="text-gray-500 text-sm">11:3654 AM</p>
-          </div>
-          <div
-            class="flex items-center justify-between bg-gray-100 p-3 rounded-xl"
-          >
-            <div>
-              <h4 class="font-semibold mb-1.5 w-full lg:w-[210px]">
-                Bangladesh Railway Helpline
-              </h4>
-              <p class="text-gray-500">999</p>
-            </div>
-            <p class="text-gray-500 text-sm">11:3654 AM</p>
-          </div>
+          <div class="space-y-4" id="history-container"></div>
         </div>
       </div>
     </main>
