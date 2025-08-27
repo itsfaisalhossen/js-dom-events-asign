@@ -25,3 +25,59 @@ for (const heartBtn of allHeartBtn) {
     setInnerText(totalCount);
   });
 }
+
+const historyData = [];
+const allCallBtn = document.getElementsByClassName("call-btn");
+for (const callBtn of allCallBtn) {
+  callBtn.addEventListener("click", function (e) {
+    const title =
+      callBtn.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
+    const subTitle =
+      callBtn.parentNode.parentNode.childNodes[3].childNodes[3].innerText;
+    const number =
+      callBtn.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+
+    const setCoinElement = getElement("coin-decrease");
+    const coinAmount = getInnerText("coin-decrease");
+    const totalCoin = coinAmount - 20;
+
+    const data = {
+      historyTile: title,
+      historyNumber: number,
+      date: new Date().toLocaleTimeString(),
+    };
+
+    // totalCoin == 0 || totalCoin > 0
+
+    if (totalCoin == -20) {
+      setCoinElement.innerText = 0;
+      alert("You have no coin. You have to call minimum 20 coin");
+      return;
+    }
+    setCoinElement.innerText = totalCoin;
+
+    historyData.push(data);
+    const historeyContainer = getElement("history-container");
+    historeyContainer.innerText = "";
+
+    for (const data of historyData) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+         <div
+            class="flex items-center justify-between bg-gray-100 p-3 rounded-xl"
+          >
+            <div>
+              <h4 class="font-semibold mb-1.5 w-full lg:w-[210px]">
+                 ${data.historyTile}
+              </h4>
+              <p class="text-gray-500">${data.historyNumber}</p>
+            </div>
+            <p class="text-gray-500 text-sm">${data.date}</p>
+          </div>
+      `;
+      historeyContainer.appendChild(div);
+    }
+
+    alert(`📞 Calling ${subTitle} ${number}. . . .`);
+  });
+}
