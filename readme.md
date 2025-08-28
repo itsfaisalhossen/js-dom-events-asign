@@ -1,77 +1,35 @@
-### Answer the following questions clearly:
+1.  Difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll
 
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
+getElementById(id) → Finds one element by its ID. Returns a single element (or null).
 
-<!-- Answer ot down below -->
+getElementsByClassName(className) → Finds all elements with a given class. Returns a live HTMLCollection.
 
-1. ANSWER :----
-   getElementById(id)
-   What it does: Finds one element with the given id.
-   Return type: A single Element object (or null if not found).
-   Usage:
-   const el = document.getElementById("my-id");
+querySelector(cssSelector) → Finds the first element matching a CSS selector. Returns a single element (or null).
 
-   getElementsByClassName(className)
-   What it does: Finds all elements that have the given class.
-   Return type: A live HTMLCollection (not an array, but array-like).
-   Usage:
-   const els = document.getElementsByClassName("my-class");
+querySelectorAll(cssSelector) → Finds all elements matching a CSS selector. Returns a static NodeList.
 
-   querySelector(cssSelector)
-   What it does: Finds the first element matching a CSS selector.
-   Return type: A single Element object (or null).
-   Usage:
-   const el = document.querySelector(".my-class");  
-    const el2 = document.querySelector("#my-id");
+2. Creating and Inserting a New Element into the DOM
 
-   querySelectorAll(cssSelector)
-   What it does: Finds all elements matching a CSS selector.
-   Return type: A static NodeList (does not auto-update).
-   Usage:
-   const els = document.querySelectorAll(".my-class");
+Create a new element using document.createElement().
 
-2. ANSWER :-----
-   Create the element
-   Use document.createElement(tagName):
-   const newDiv = document.createElement("div");
-   Now you have a <div> element in memory (not yet in the page).
+Add text, attributes, or child elements to it.
 
-   Add content or attributes
-   You can fill it with text, attributes, or even child elements:
-   newDiv.textContent = "Hello, I am a new div!";
-   newDiv.id = "my-new-div";
-   newDiv.className = "box";
+Insert it into the DOM using methods like appendChild() or by modifying innerHTML.
 
-   const span = document.createElement("span");
-   span.textContent = " (inside span)";
-   newDiv.appendChild(span);
-   const container = document.getElementById("container"); // parent element
+3. What is Event Bubbling?
 
-   // Append as the last child
-   container.appendChild(newDiv);
-   You could also inject HTML directly:
-   document.getElementById("container").innerHTML += "<div>Hello!</div>";
+When an event occurs on an element, it doesn’t stop there. It bubbles up through its parent elements and continues until it reaches the document.
 
-3. ANSWER :-----
-   When an event (like a click) happens on an element, that event doesn’t just stay there.
-   It “bubbles up” from the target element through its parents and finally document.
-   Think of dropping a stone in water: ripples move outward in the DOM, events move upward.
+4. What is Event Delegation? Why is it useful?
 
-4. ANSWER :-----
-   Event Delegation is a technique where you attach a single event listener to a parent element instead of attaching listeners to multiple child elements.
-   Because of event bubbling, when a child element is clicked, the event travels up to the parent, where you can handle it.
-   Event delegation uses bubbling: parent listens for events on its children.
-   It improves efficiency and supports dynamic elements.
+Event Delegation is the practice of attaching a single event listener to a parent element instead of many listeners on child elements.
 
-5. ANSWER :-----
-   event.preventDefault()
-   What it does: Stops the default browser behavior of an element.
-   It does NOT stop bubbling.
+Works because of event bubbling.
 
-   event.stopPropagation()
-   What it does: Stops the event from bubbling up (or capturing down).
-   It does NOT stop the default action.
+More efficient (fewer listeners).
+
+Useful for handling dynamic elements added later.
+
+5. Difference between preventDefault() and stopPropagation()
+
+preventDefault() → Stops the default browser action (e.g., preventing form submission or link navigation).
