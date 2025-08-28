@@ -11,7 +11,6 @@ function getInnerText(id) {
   return elementValueNumber;
 }
 
-// function to set innerText
 function setInnerText(value) {
   const setElement = getElement("heart-count");
   setElement.innerText = value;
